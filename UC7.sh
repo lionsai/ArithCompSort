@@ -17,10 +17,7 @@ comp[4]=$s
 echo "dictionary: " ${!comp[@]} "--> " ${comp[@]}
 declare -a arr
 
-for((i=1; i<=4; i++))
-do
-        arr[$i]=${comp[i]}
-        echo $i ">" ${comp[i]}
+for((i=1; i<=4; i
 
 done
 
