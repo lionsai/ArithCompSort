@@ -17,6 +17,7 @@ comp[4]=$s
 echo "dictionary: " ${!comp[@]} "--> " ${comp[@]}
 declare -a arr
 
+<<<<<<< HEAD
 for((i=1; i<=4; i++))
 do
 <<<<<<< HEAD
@@ -26,6 +27,9 @@ do
 	arr[$i]=${comp[i]}
 	echo $i ">" ${comp[i]}
 >>>>>>> 9b70c16560a967c555f84974f466f7997e00b2df
+=======
+for((i=1; i<=4; i
+>>>>>>> 618dd6d25fca04332ccdf3ca6d2eba0b6b283011
 
 done
 
