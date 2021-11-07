@@ -19,8 +19,13 @@ declare -a arr
 
 for((i=1; i<=4; i++))
 do
+<<<<<<< HEAD
         arr[$i]=${comp[i]}
         echo $i ">" ${comp[i]}
+=======
+	arr[$i]=${comp[i]}
+	echo $i ">" ${comp[i]}
+>>>>>>> 9b70c16560a967c555f84974f466f7997e00b2df
 
 done
 
