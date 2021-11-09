@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 read -p "a: " a
 read -p "b: " b
@@ -11,27 +11,22 @@ s=$(($a%$b+$c))
 
 declare -A comp
 
-comp[1]=$p
-comp[2]=$q
-comp[3]=$r
-comp[4]=$s
+comp[p]=$p
+comp[q]=$q
+comp[r]=$r
+comp[s]=$s
 
 echo "dictionary: " ${!comp[@]} "--> " ${comp[@]}
 declare -a arr
+arr=("$p" "$q" "$r" "$s")
 
-for((i=1; i<=4; i++))
-do
-        arr[$i]=${comp[i]}
-        echo $i ">" ${comp[i]}
-
-done
 echo ${arr[@]}
 
-for (( i=1; i<5; i++ ))
+for (( i=0; i<4; i++ ))
 do
-        for (( j=1; j<5-i-1; j++ ))
+        for (( j=0; j<4-i-1; j++ ))
         do
-                if [ ${arr[j]} -gt ${arr[$((j+1))]}]
+                if (( arr[j]>arr[j+1] ))
                 then
                         temp=${arr[j]}
                         arr[$j]=${arr[$((j+1))]}
